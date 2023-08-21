@@ -1,0 +1,15 @@
+@import './fonts.css';
+@import './components/box-sizing.css';
+@import './components/sr-only.css';
+@import './components/button.css';
+@import './components/page.css';
+@import './components/section.css';
+@import './components/form.css';
+
+:root {
+  --color-pale-navy: 234, 17%, 26%;
+  --color-dark-navy: 234, 29%, 20%;
+  --color-gray: 243, 28%, 13%;
+  --color-red: 4, 100%, 67%;
+  --gradient: linear-gradient(225deg, hsl(14, 100%, 61%) 0%, hsl(346, 100%, 66%) 100%);
+}

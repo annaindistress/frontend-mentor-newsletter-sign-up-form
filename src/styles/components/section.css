@@ -1,0 +1,134 @@
+.section {
+  position: relative;
+  min-height: 100vh;
+  padding-block-end: 40px;
+  padding-inline: 24px;
+  background-color: white;
+}
+
+.section::before {
+  content: '';
+  display: block;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section--form {
+  padding-block-start: 325px;
+}
+
+.section--form::before {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline: 0;
+  width: 100%;
+  height: 285px;
+  background-image: url('/images/illustration-sign-up-mobile.svg');
+  background-position: center top;
+  border-radius: 0 0 16px 16px;
+}
+
+.section--message {
+  display: grid;
+  grid-template-rows: repeat(2, min-content) 1fr;
+  padding-block-start: 150px;
+}
+
+.section--message::before {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  margin-block-end: 40px;
+  background-image: url('/images/icon-success.svg');
+  background-position: center;
+}
+
+.section__title {
+  margin: 0;
+  margin-block-end: 24px;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1;
+}
+
+.section__text {
+  margin-block-start: 0;
+  margin-block-end: 24px;
+}
+
+.section__list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  margin-block-end: 40px;
+  padding: 0;
+  list-style: none;
+}
+
+.section__item {
+  position: relative;
+  padding-inline-start: 35px;
+}
+
+.section__item::before {
+  content: '';
+  position: absolute;
+  inset-block-start: 2px;
+  inset-inline-start: 0;
+  display: block;
+  width: 21px;
+  height: 21px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21' height='21' viewBox='0 0 21 21'%3E%3Cg fill='none'%3E%3Ccircle cx='10.5' cy='10.5' r='10.5' fill='%23FF6155'/%3E%3Cpath stroke='%23FFF' stroke-width='2' d='M6 11.381 8.735 14 15 8'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.section__email {
+  font-weight: 700;
+}
+
+.section__button {
+  margin-block-start: auto;
+}
+
+@media (min-width: 768px) {
+
+  .section {
+    width: 504px;
+    min-height: 520px;
+    padding-inline: 64px;
+    padding-block-end: 64px;
+    border-radius: 36px;
+    box-shadow: 0 15px 60px 0 hsla(0, 0%, 0%, 25%);
+    overflow: hidden;
+  }
+
+  .section--message {
+    padding-block-start: 48px;
+  }
+
+  .section__title {
+    font-size: 56px;
+  }
+}
+
+@media (min-width: 992px) {
+
+  .section--form {
+    display: grid;
+    grid-template-rows: repeat(4, min-content);
+    align-content: center;
+    min-width: 928px;
+    min-height: 640px;
+    padding-block-start: 64px;
+    padding-inline-end: 50%;
+  }
+
+  .section--form::before {
+    width: 400px;
+    height: calc(100% - 48px);
+    inset-block: 24px;
+    inset-inline-start: auto;
+    inset-inline-end: 24px;
+    background-image: url('/images/illustration-sign-up-desktop.svg');
+    border-radius: 16px;
+  }
+}
